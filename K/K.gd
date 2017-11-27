@@ -1,12 +1,24 @@
 extends KinematicBody2D
 
 onready var Aspekto = get_node("Aspekto")
+onready var Ondo = get_node("/root/Radiko/Ondo")
+onready var Ondo_Animo = get_node("/root/Radiko/Ondo/Animo")
+onready var Ondo_Aspekto = get_node("/root/Radiko/Ondo/Aspekto")
+onready var Ondoj = get_node("/root/Radiko/Kanvaso/Ondoj")
 
 const VIVO = 4.0
 var vivo = 4.0
+var ondoj = 5
 
 func _ready():
+	T.K = self
+	Ondo_Animo.interpolate_property(
+		Ondo, "transform/scale",Vector2(0.1,0.1),
+		Vector2(1,1),0.3,Tween.TRANS_QUAD, Tween.EASE_OUT
+		)
+	Ondo.set_scale(Vector2(0.1,0.1))
 	set_process(true)
+	set_process_input(true)
 
 func _process(delta):
 	if Input.is_action_pressed("supre"):
@@ -41,6 +53,14 @@ func _process(delta):
 		Aspekto.set_frame(1)
 		Aspekto.stop()
 
+func _input(evento):
+	if evento.is_action_pressed("ondi"):
+		if ondoj >= 1:
+			ondoj -= 1
+			Ondoj.set_text(str(ondoj))
+			Ondo_Animo.resume_all()
+			Ondo_Aspekto.show()
+
 func Malsanigxi(potenco):
 	vivo -= potenco
 	if vivo <= 0:
@@ -52,3 +72,7 @@ func Sanigxi(potenco):
 	if vivo > VIVO:
 		vivo = VIVO
 	set_opacity(vivo/VIVO)
+
+func Aldoni_ondon(valoro):
+	ondoj += valoro
+	Ondoj.set_text(str(ondoj))

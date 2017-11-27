@@ -2,15 +2,15 @@
 
 [ext_resource path="res://K/K.gd" type="Script" id=1]
 [ext_resource path="res://K/ombro.png" type="Texture" id=2]
-[ext_resource path="res://K/bildoj/george-15.png" type="Texture" id=3]
-[ext_resource path="res://K/bildoj/george-11.png" type="Texture" id=4]
-[ext_resource path="res://K/bildoj/george-7.png" type="Texture" id=5]
-[ext_resource path="res://K/bildoj/george-13.png" type="Texture" id=6]
-[ext_resource path="res://K/bildoj/george-1.png" type="Texture" id=7]
-[ext_resource path="res://K/bildoj/george-5.png" type="Texture" id=8]
-[ext_resource path="res://K/bildoj/george-14.png" type="Texture" id=9]
-[ext_resource path="res://K/bildoj/george-10.png" type="Texture" id=10]
-[ext_resource path="res://K/bildoj/george-6.png" type="Texture" id=11]
+[ext_resource path="res://K/bildoj/george-14.png" type="Texture" id=3]
+[ext_resource path="res://K/bildoj/george-10.png" type="Texture" id=4]
+[ext_resource path="res://K/bildoj/george-6.png" type="Texture" id=5]
+[ext_resource path="res://K/bildoj/george-15.png" type="Texture" id=6]
+[ext_resource path="res://K/bildoj/george-11.png" type="Texture" id=7]
+[ext_resource path="res://K/bildoj/george-7.png" type="Texture" id=8]
+[ext_resource path="res://K/bildoj/george-13.png" type="Texture" id=9]
+[ext_resource path="res://K/bildoj/george-1.png" type="Texture" id=10]
+[ext_resource path="res://K/bildoj/george-5.png" type="Texture" id=11]
 [ext_resource path="res://K/bildoj/george-12.png" type="Texture" id=12]
 [ext_resource path="res://K/bildoj/george-0.png" type="Texture" id=13]
 [ext_resource path="res://K/bildoj/george-4.png" type="Texture" id=14]
@@ -25,17 +25,17 @@ radius = 17.3192
 animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
-"name": "dekstre",
+"name": "supre",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
 "loop": true,
-"name": "maldekstre",
+"name": "dekstre",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "supre",
+"name": "maldekstre",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
@@ -55,6 +55,13 @@ collision/mask = 5
 collision/margin = 0.08
 script/script = ExtResource( 1 )
 
+[node name="K_Formo" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( 0, 2 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
 [node name="Ombro" type="Sprite" parent="."]
 
 transform/pos = Vector2( 0, 16 )
@@ -65,13 +72,5 @@ texture = ExtResource( 2 )
 
 frames = SubResource( 2 )
 animation = "malsupre"
-playing = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-
-transform/pos = Vector2( 0, 2 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
 
 

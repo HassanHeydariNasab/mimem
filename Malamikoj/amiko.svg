@@ -15,8 +15,8 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
-   sodipodi:docname="malamiko.svg"
-   inkscape:export-filename="/home/hsn6/mi/Malamikoj/malamiko.png"
+   sodipodi:docname="amiko.svg"
+   inkscape:export-filename="/home/hsn6/mi/Malamikoj/amiko.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96">
   <defs
@@ -29,8 +29,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8"
-     inkscape:cx="79.821879"
-     inkscape:cy="53.337504"
+     inkscape:cx="65.536165"
+     inkscape:cy="56.55179"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -66,7 +66,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -76,14 +76,14 @@
      id="layer1"
      transform="translate(0,-263.13332)">
     <circle
-       style="fill:#000000;stroke-width:2;stroke:#ff6600;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:#000000;stroke-width:2;stroke:#00cc00;stroke-miterlimit:4;stroke-dasharray:none"
        id="path4506"
        cx="280.06665"
        cy="-16.933331"
        r="14.816667"
        transform="rotate(90)" />
     <circle
-       style="fill:#ff6600;stroke-width:0.17638917"
+       style="fill:#00cc00;stroke-width:0.17638917"
        id="path819"
        cx="23.283333"
        cy="275.30414"
@@ -93,6 +93,6 @@
        cy="284.82916"
        cx="23.283333"
        id="circle821"
-       style="fill:#ff6600;stroke-width:0.17638917" />
+       style="fill:#00cc00;stroke-width:0.17638917" />
   </g>
 </svg>

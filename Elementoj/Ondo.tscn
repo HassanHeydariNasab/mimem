@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=1]
 
-[ext_resource path="res://Elementoj/Vivo.gd" type="Script" id=1]
-[ext_resource path="res://Elementoj/vivo.png" type="Texture" id=2]
+[ext_resource path="res://Elementoj/Ondo.gd" type="Script" id=1]
+[ext_resource path="res://Elementoj/ondo.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 16.9025
 
-[node name="Vivo" type="Area2D"]
+[node name="Ondo" type="Area2D"]
 
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
