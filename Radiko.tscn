@@ -90,8 +90,6 @@ __meta__ = {
 
 [node name="Elementoj" type="Node2D" parent="."]
 
-editor/display_folded = true
-
 [node name="Ondo" parent="Elementoj" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 234.906, 395.631 )
@@ -102,11 +100,15 @@ transform/pos = Vector2( 492.95, 327.325 )
 
 [node name="Vivo" parent="Elementoj" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 261.755, 529.739 )
+transform/pos = Vector2( 523.578, 668.203 )
 
 [node name="Vivo1" parent="Elementoj" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 323.805, 227.246 )
+transform/pos = Vector2( 218.069, 234.799 )
+
+[node name="Vivo2" parent="Elementoj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 235.691, 1000.13 )
 
 [node name="K" parent="." instance=ExtResource( 6 )]
 
@@ -137,7 +139,6 @@ sort/enabled = true
 
 [node name="Kanvaso" type="CanvasLayer" parent="."]
 
-editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -246,7 +247,7 @@ margin/right = 40.0
 margin/bottom = 16.0
 custom_fonts/font = ExtResource( 12 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_shadow = Color( 0.078125, 1, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.4, 0.6, 1, 1 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 2
 custom_constants/shadow_as_outline = 17

@@ -15,7 +15,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
-   sodipodi:docname="ondo.svg">
+   sodipodi:docname="ondo.svg"
+   inkscape:export-filename="/home/hsn6/mi/Elementoj/ondo.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -25,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="70.706014"
-     inkscape:cy="65.674346"
+     inkscape:zoom="2.8"
+     inkscape:cx="66.027337"
+     inkscape:cy="84.305941"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -45,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
         <cc:license
            rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
       </cc:Work>
@@ -64,24 +67,26 @@
      inkscape:label="Tavolo 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-263.13331)">
+     transform="translate(0,-263.13331)"
+     style="opacity:0.96">
     <circle
-       style="opacity:1;fill:#ffffff;stroke:#6699ff;stroke-width:2.02964425;stroke-miterlimit:4;stroke-dasharray:none"
+       style="opacity:1;fill:#ffffff;stroke:#6699ff;stroke-width:3.77999997;stroke-miterlimit:4;stroke-dasharray:none"
        id="path815"
-       cx="16.933332"
-       cy="280.06665"
-       r="15.918511" />
-    <circle
-       r="12.009949"
-       cy="280.06665"
-       cx="16.933332"
-       id="circle817"
-       style="opacity:1;fill:#ffffff;stroke:#6699ff;stroke-width:1.53129411;stroke-miterlimit:4;stroke-dasharray:none" />
-    <circle
-       style="opacity:1;fill:#ffffff;stroke:#6699ff;stroke-width:1.0102917;stroke-miterlimit:4;stroke-dasharray:none"
+       cx="-16.933332"
+       cy="-280.06665"
+       r="15.043295"
+       transform="scale(-1)" />
+    <path
+       style="opacity:1;fill:#ffffff;stroke:#6699ff;stroke-width:2.51742673;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 8.0777629,280.06665 c -10e-7,-3.16379 1.687862,-6.08725 4.4277851,-7.66915 2.739923,-1.5819 6.115647,-1.5819 8.85557,0 2.739923,1.5819 4.427785,4.50536 4.427784,7.66915"
        id="circle819"
-       cx="16.933332"
-       cy="280.06665"
-       r="7.9237237" />
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssc" />
+    <path
+       sodipodi:nodetypes="cccc"
+       inkscape:connector-curvature="0"
+       id="path816"
+       d="m 11.883543,280.01011 c -10e-7,-1.80412 2.524895,-3.31492 2.524895,-3.31492 1.380429,-0.37013 2.582692,-0.95802 5.04979,0 0,0 2.524895,1.5108 2.524894,3.31492"
+       style="opacity:1;fill:#ffffff;stroke:#6699ff;stroke-width:1.43553448;stroke-miterlimit:4;stroke-dasharray:none" />
   </g>
 </svg>

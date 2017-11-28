@@ -8,13 +8,17 @@ onready var Ondoj = get_node("/root/Radiko/Kanvaso/Ondoj")
 
 const VIVO = 4.0
 var vivo = 4.0
-var ondoj = 5
+var ondoj = 50
 
 func _ready():
 	T.K = self
 	Ondo_Animo.interpolate_property(
 		Ondo, "transform/scale",Vector2(0.1,0.1),
 		Vector2(1,1),0.3,Tween.TRANS_QUAD, Tween.EASE_OUT
+		)
+	Ondo_Animo.interpolate_property(
+		Ondo, "visibility/opacity",1,
+		0,0.3,Tween.TRANS_QUAD, Tween.EASE_OUT
 		)
 	Ondo.set_scale(Vector2(0.1,0.1))
 	set_process(true)
@@ -58,8 +62,8 @@ func _input(evento):
 		if ondoj >= 1:
 			ondoj -= 1
 			Ondoj.set_text(str(ondoj))
-			Ondo_Animo.resume_all()
 			Ondo_Aspekto.show()
+			Ondo_Animo.resume_all()
 
 func Malsanigxi(potenco):
 	vivo -= potenco
@@ -82,5 +86,5 @@ func _on_Ondo_body_enter( korpo ):
 
 func _on_Animo_tween_complete( object, key ):
 	Ondo_Animo.stop_all()
+	Ondo_Animo.seek(0)
 	Ondo_Aspekto.hide()
-	Ondo.set_scale(Vector2(0.1,0.1))
