@@ -1,53 +1,59 @@
-[gd_scene load_steps=17 format=1]
+[gd_scene load_steps=19 format=1]
 
 [ext_resource path="res://K/K.gd" type="Script" id=1]
 [ext_resource path="res://K/ombro.png" type="Texture" id=2]
-[ext_resource path="res://K/bildoj/george-14.png" type="Texture" id=3]
-[ext_resource path="res://K/bildoj/george-10.png" type="Texture" id=4]
-[ext_resource path="res://K/bildoj/george-6.png" type="Texture" id=5]
-[ext_resource path="res://K/bildoj/george-15.png" type="Texture" id=6]
-[ext_resource path="res://K/bildoj/george-11.png" type="Texture" id=7]
-[ext_resource path="res://K/bildoj/george-7.png" type="Texture" id=8]
-[ext_resource path="res://K/bildoj/george-13.png" type="Texture" id=9]
-[ext_resource path="res://K/bildoj/george-1.png" type="Texture" id=10]
-[ext_resource path="res://K/bildoj/george-5.png" type="Texture" id=11]
-[ext_resource path="res://K/bildoj/george-12.png" type="Texture" id=12]
-[ext_resource path="res://K/bildoj/george-0.png" type="Texture" id=13]
-[ext_resource path="res://K/bildoj/george-4.png" type="Texture" id=14]
+[ext_resource path="res://K/bildoj/george-12.png" type="Texture" id=3]
+[ext_resource path="res://K/bildoj/george-0.png" type="Texture" id=4]
+[ext_resource path="res://K/bildoj/george-4.png" type="Texture" id=5]
+[ext_resource path="res://K/bildoj/george-13.png" type="Texture" id=6]
+[ext_resource path="res://K/bildoj/george-1.png" type="Texture" id=7]
+[ext_resource path="res://K/bildoj/george-5.png" type="Texture" id=8]
+[ext_resource path="res://K/bildoj/george-15.png" type="Texture" id=9]
+[ext_resource path="res://K/bildoj/george-11.png" type="Texture" id=10]
+[ext_resource path="res://K/bildoj/george-7.png" type="Texture" id=11]
+[ext_resource path="res://K/bildoj/george-14.png" type="Texture" id=12]
+[ext_resource path="res://K/bildoj/george-10.png" type="Texture" id=13]
+[ext_resource path="res://K/bildoj/george-6.png" type="Texture" id=14]
+[ext_resource path="res://K/ondo.png" type="Texture" id=15]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CircleShape2D" id=4]
 
 custom_solver_bias = 0.0
 radius = 17.3192
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=5]
 
 animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
-"name": "supre",
+"name": "malsupre",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
 "loop": true,
-"name": "dekstre",
+"name": "maldekstre",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "maldekstre",
+"name": "dekstre",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
 "loop": true,
-"name": "malsupre",
+"name": "supre",
 "speed": 10.0
 } ]
+
+[sub_resource type="CircleShape2D" id=3]
+
+custom_solver_bias = 0.0
+radius = 100.0
 
 [node name="K" type="KinematicBody2D"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 4 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 2 )
 shapes/0/trigger = false
 collision/layers = 2
@@ -58,7 +64,7 @@ script/script = ExtResource( 1 )
 [node name="K_Formo" type="CollisionShape2D" parent="."]
 
 transform/pos = Vector2( 0, 2 )
-shape = SubResource( 1 )
+shape = SubResource( 4 )
 trigger = false
 _update_shape_index = 0
 
@@ -70,7 +76,44 @@ texture = ExtResource( 2 )
 
 [node name="Aspekto" type="AnimatedSprite" parent="."]
 
-frames = SubResource( 2 )
+frames = SubResource( 5 )
 animation = "malsupre"
+
+[node name="Ondo" type="Area2D" parent="."]
+
+input/pickable = true
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 0 )
+gravity = 0.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitorable = false
+collision/layers = 2048
+collision/mask = 4
+
+[node name="Ondo_Formo" type="CollisionShape2D" parent="Ondo"]
+
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Animo" type="Tween" parent="Ondo"]
+
+playback/process_mode = 1
+playback/active = false
+playback/repeat = true
+playback/speed = 1.0
+
+[node name="Aspekto" type="Sprite" parent="Ondo"]
+
+visibility/visible = false
+transform/scale = Vector2( 0.68, 0.68 )
+texture = ExtResource( 15 )
+
+[connection signal="body_enter" from="Ondo" to="." method="_on_Ondo_body_enter"]
+
+[connection signal="tween_complete" from="Ondo/Animo" to="." method="_on_Animo_tween_complete"]
 
 

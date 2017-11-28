@@ -1,9 +1,9 @@
 extends KinematicBody2D
 
 onready var Aspekto = get_node("Aspekto")
-onready var Ondo = get_node("/root/Radiko/Ondo")
-onready var Ondo_Animo = get_node("/root/Radiko/Ondo/Animo")
-onready var Ondo_Aspekto = get_node("/root/Radiko/Ondo/Aspekto")
+onready var Ondo = get_node("Ondo")
+onready var Ondo_Animo = get_node("Ondo/Animo")
+onready var Ondo_Aspekto = get_node("Ondo/Aspekto")
 onready var Ondoj = get_node("/root/Radiko/Kanvaso/Ondoj")
 
 const VIVO = 4.0
@@ -76,3 +76,11 @@ func Sanigxi(potenco):
 func Aldoni_ondon(valoro):
 	ondoj += valoro
 	Ondoj.set_text(str(ondoj))
+
+func _on_Ondo_body_enter( korpo ):
+	korpo.Morti()
+
+func _on_Animo_tween_complete( object, key ):
+	Ondo_Animo.stop_all()
+	Ondo_Aspekto.hide()
+	Ondo.set_scale(Vector2(0.1,0.1))
