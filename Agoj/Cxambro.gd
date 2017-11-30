@@ -1,10 +1,13 @@
 extends Area2D
 
-onready var Kamero = get_node("/root/Radiko/Kamero")
 onready var Formo = get_node("Formo")
 
-func _ready():
-	pass
+signal eniri
 
-func _on_Cx0_body_enter( korpo ):
-	Kamero.set_offset(Formo.get_global_pos())
+func _ready():
+	self.connect("body_enter", self, "_je_Cxambro_korpo_eniri")
+
+func _je_Cxambro_korpo_eniri( korpo ):
+	if not self.is_connected("eniri", T.Radiko, "_je_eniri"):
+		self.connect("eniri", T.Radiko, "_je_eniri")
+	emit_signal("eniri", get_name(), Formo.get_global_pos())

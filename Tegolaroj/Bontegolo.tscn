@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://Tegolaroj/Bontegolo.gd" type="Script" id=1]
+
+[node name="Bontegolo" type="Area2D"]
+
+visibility/opacity = 0.0
+input/pickable = true
+gravity_vec = Vector2( 0, 0 )
+gravity = 0.0
+linear_damp = 0.1
+angular_damp = 1.0
+script/script = ExtResource( 1 )
+
+[node name="Aspekto" type="Polygon2D" parent="."]
+
+transform/pos = Vector2( 0, 64 )
+polygon = Vector2Array( 0, -64, 64, -64, 64, 0, 0, 0 )
+uv = Vector2Array(  )
+color = Color( 0.523525, 0.863281, 0.165237, 1 )
+vertex_colors = ColorArray(  )
+offset = Vector2( 0, 0 )
+texture/texture = null
+texture/offset = Vector2( 0, 0 )
+texture/scale = Vector2( 1, 1 )
+texture/rotation = 0.0
+invert/enable = false
+invert/border = 100.0
+
+[node name="Tempilo" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="Aperi" type="Tween" parent="."]
+
+playback/process_mode = 1
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="Malaperi" type="Tween" parent="."]
+
+playback/process_mode = 1
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[connection signal="timeout" from="Tempilo" to="." method="_on_Tempilo_timeout"]
+
+

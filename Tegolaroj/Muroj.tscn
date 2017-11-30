@@ -1,11 +1,17 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://Tegolaroj/muro_ligna.png" type="Texture" id=1]
+[ext_resource path="res://Tegolaroj/mureto_ligna.png" type="Texture" id=2]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -32, 17, 32, 17, 32, 32, -32, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 16, 17, 32, 17, 32, 32, 16, 32 )
 
 [node name="Muroj" type="Node2D"]
 
@@ -31,6 +37,32 @@ bounce = 0.0
 
 build_mode = 0
 polygon = Vector2Array( -32, 17, 32, 17, 32, 32, -32, 32 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="Ligno1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 104, 0 )
+texture = ExtResource( 2 )
+region_rect = Rect2( 173, 225, 64, 64 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ligno1"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 6
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ligno1/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( 16, 17, 32, 17, 32, 32, 16, 32 )
 shape_range = Vector2( 0, 0 )
 trigger = false
 

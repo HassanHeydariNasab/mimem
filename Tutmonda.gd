@@ -20,7 +20,8 @@ func _notification(what):
 			pass
 			print(1)
 		else:
-			get_tree().change_scene("res://Niveloj.tscn")
+			#get_tree().change_scene("res://Niveloj.tscn")
+			pass
 
 func _ready():
 	Agordejo.load(agordejo)
