@@ -1,19 +1,20 @@
-[gd_scene load_steps=23 format=1]
+[gd_scene load_steps=24 format=1]
 
 [ext_resource path="res://Radiko.gd" type="Script" id=1]
 [ext_resource path="res://Tegolaroj/Plankoj.tres" type="TileSet" id=2]
 [ext_resource path="res://Agoj/Cxambro.gd" type="Script" id=3]
 [ext_resource path="res://Tegolaroj/Bontegolo.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Tegolaroj/Muroj.tres" type="TileSet" id=5]
-[ext_resource path="res://Elementoj/Ondo.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Elementoj/Vivo.tscn" type="PackedScene" id=7]
-[ext_resource path="res://K/K.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Malamikoj/Malamiko.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Butonoj/turni_dekstre.png" type="Texture" id=10]
-[ext_resource path="res://Butonoj/turni_dekstre_premita.png" type="Texture" id=11]
-[ext_resource path="res://Butonoj/bombi_premita.png" type="Texture" id=12]
-[ext_resource path="res://Butonoj/bombi.png" type="Texture" id=13]
-[ext_resource path="res://Tiparoj/jomhuria.fnt" type="BitmapFont" id=14]
+[ext_resource path="res://Tegolaroj/Malbontegolo.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Tegolaroj/Muroj.tres" type="TileSet" id=6]
+[ext_resource path="res://Elementoj/Ondo.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Elementoj/Vivo.tscn" type="PackedScene" id=8]
+[ext_resource path="res://K/K.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Malamikoj/Malamiko.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Butonoj/turni_dekstre.png" type="Texture" id=11]
+[ext_resource path="res://Butonoj/turni_dekstre_premita.png" type="Texture" id=12]
+[ext_resource path="res://Butonoj/bombi_premita.png" type="Texture" id=13]
+[ext_resource path="res://Butonoj/bombi.png" type="Texture" id=14]
+[ext_resource path="res://Tiparoj/jomhuria.fnt" type="BitmapFont" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -101,8 +102,6 @@ __meta__ = {
 
 [node name="Areoj" type="Node2D" parent="."]
 
-editor/display_folded = true
-
 [node name="Cx0" type="Area2D" parent="Areoj"]
 
 editor/display_folded = true
@@ -128,10 +127,9 @@ _update_shape_index = 0
 
 [node name="Cx1" type="Area2D" parent="Areoj"]
 
-editor/display_folded = true
 transform/pos = Vector2( 286.627, 1150.43 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 0 )
@@ -200,6 +198,396 @@ transform/pos = Vector2( 448, 1152 )
 [node name="Bontegolo10" parent="Areoj/Cx1/Bontegoloj" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 512, 1152 )
+
+[node name="Malbontegoloj" type="Node2D" parent="Areoj/Cx1"]
+
+[node name="Malbontegolo" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 33.373, -318.43 )
+
+[node name="Malbontegolo1" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -94.627, -318.43 )
+
+[node name="Malbontegolo2" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 33.373, -254.43 )
+
+[node name="Malbontegolo3" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 33.373, -190.43 )
+
+[node name="Malbontegolo4" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -94.627, -254.43 )
+
+[node name="Malbontegolo5" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -94.627, -190.43 )
+
+[node name="Malbontegolo6" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -94.627, -126.43 )
+
+[node name="Malbontegolo7" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 33.373, -126.43 )
+
+[node name="Malbontegolo8" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 97.373, -126.43 )
+
+[node name="Malbontegolo9" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 97.373, -190.43 )
+
+[node name="Malbontegolo10" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 97.373, -254.43 )
+
+[node name="Malbontegolo11" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 97.373, -318.43 )
+
+[node name="Malbontegolo12" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 161.373, -318.43 )
+
+[node name="Malbontegolo13" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 161.373, -254.43 )
+
+[node name="Malbontegolo14" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 161.373, -190.43 )
+
+[node name="Malbontegolo15" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 161.373, -126.43 )
+
+[node name="Malbontegolo16" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 225.373, -126.43 )
+
+[node name="Malbontegolo17" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 225.373, -190.43 )
+
+[node name="Malbontegolo18" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 225.373, -254.43 )
+
+[node name="Malbontegolo19" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 225.373, -318.43 )
+
+[node name="Malbontegolo20" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -158.627, -318.43 )
+
+[node name="Malbontegolo21" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -222.627, -318.43 )
+
+[node name="Malbontegolo22" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -286.627, -318.43 )
+
+[node name="Malbontegolo23" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -286.627, -254.43 )
+
+[node name="Malbontegolo24" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -222.627, -254.43 )
+
+[node name="Malbontegolo25" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -158.627, -254.43 )
+
+[node name="Malbontegolo26" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -158.627, -190.43 )
+
+[node name="Malbontegolo27" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -222.627, -190.43 )
+
+[node name="Malbontegolo28" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -286.627, -190.43 )
+
+[node name="Malbontegolo29" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -286.627, -126.43 )
+
+[node name="Malbontegolo30" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -222.627, -126.43 )
+
+[node name="Malbontegolo31" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -158.627, -126.43 )
+
+[node name="Malbontegolo32" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -94.627, -62.4301 )
+
+[node name="Malbontegolo33" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -158.627, -62.4301 )
+
+[node name="Malbontegolo34" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -222.627, -62.4301 )
+
+[node name="Malbontegolo35" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -286.627, -62.4301 )
+
+[node name="Malbontegolo36" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 33.373, -62.4301 )
+
+[node name="Malbontegolo37" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 97.373, -62.4301 )
+
+[node name="Malbontegolo38" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 161.373, -62.4301 )
+
+[node name="Malbontegolo39" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 225.373, -62.4301 )
+
+[node name="Malbontegolo40" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 225.373, 65.5699 )
+
+[node name="Malbontegolo41" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 161.373, 65.5699 )
+
+[node name="Malbontegolo42" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 97.373, 65.5699 )
+
+[node name="Malbontegolo43" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 33.373, 65.5699 )
+
+[node name="Malbontegolo44" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -30.627, 65.5699 )
+
+[node name="Malbontegolo45" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -94.627, 65.5699 )
+
+[node name="Malbontegolo46" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -94.627, 1.56995 )
+
+[node name="Malbontegolo47" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -158.627, 1.56995 )
+
+[node name="Malbontegolo48" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -158.627, 65.5699 )
+
+[node name="Malbontegolo49" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -222.627, 65.5699 )
+
+[node name="Malbontegolo50" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -222.627, 1.56995 )
+
+[node name="Malbontegolo51" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -286.627, 1.56995 )
+
+[node name="Malbontegolo52" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -286.627, 65.5699 )
+
+[node name="Malbontegolo53" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -286.627, 129.57 )
+
+[node name="Malbontegolo54" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -222.627, 129.57 )
+
+[node name="Malbontegolo55" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -158.627, 129.57 )
+
+[node name="Malbontegolo56" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -94.627, 129.57 )
+
+[node name="Malbontegolo57" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -30.627, 129.57 )
+
+[node name="Malbontegolo58" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 33.373, 129.57 )
+
+[node name="Malbontegolo59" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 97.373, 129.57 )
+
+[node name="Malbontegolo60" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 161.373, 129.57 )
+
+[node name="Malbontegolo61" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 225.373, 129.57 )
+
+[node name="Malbontegolo62" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 225.373, 193.57 )
+
+[node name="Malbontegolo63" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 161.373, 193.57 )
+
+[node name="Malbontegolo64" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 97.373, 193.57 )
+
+[node name="Malbontegolo65" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 33.373, 193.57 )
+
+[node name="Malbontegolo66" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -30.627, 193.57 )
+
+[node name="Malbontegolo67" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -94.627, 193.57 )
+
+[node name="Malbontegolo68" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -158.627, 193.57 )
+
+[node name="Malbontegolo69" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -222.627, 193.57 )
+
+[node name="Malbontegolo70" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -286.627, 193.57 )
+
+[node name="Malbontegolo71" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -286.627, 257.57 )
+
+[node name="Malbontegolo72" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -222.627, 257.57 )
+
+[node name="Malbontegolo73" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -158.627, 257.57 )
+
+[node name="Malbontegolo74" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -94.627, 257.57 )
+
+[node name="Malbontegolo75" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -30.627, 257.57 )
+
+[node name="Malbontegolo76" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 33.373, 257.57 )
+
+[node name="Malbontegolo77" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 97.373, 257.57 )
+
+[node name="Malbontegolo78" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 161.373, 257.57 )
+
+[node name="Malbontegolo79" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 225.373, 257.57 )
+
+[node name="Malbontegolo80" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 225.373, 321.57 )
+
+[node name="Malbontegolo81" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 161.373, 321.57 )
+
+[node name="Malbontegolo82" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 97.373, 321.57 )
+
+[node name="Malbontegolo83" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 33.373, 321.57 )
+
+[node name="Malbontegolo84" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -30.627, 321.57 )
+
+[node name="Malbontegolo85" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -94.627, 321.57 )
+
+[node name="Malbontegolo86" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -158.627, 321.57 )
+
+[node name="Malbontegolo87" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -222.627, 321.57 )
+
+[node name="Malbontegolo88" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -286.627, 321.57 )
+
+[node name="Malbontegolo89" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 225.373, -382.43 )
+
+[node name="Malbontegolo90" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 161.373, -382.43 )
+
+[node name="Malbontegolo91" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 97.373, -382.43 )
+
+[node name="Malbontegolo92" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 33.373, -382.43 )
+
+[node name="Malbontegolo93" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -94.627, -382.43 )
+
+[node name="Malbontegolo94" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -158.627, -382.43 )
+
+[node name="Malbontegolo95" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -222.627, -382.43 )
+
+[node name="Malbontegolo96" parent="Areoj/Cx1/Malbontegoloj" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -286.627, -382.43 )
 
 [node name="Cx2" type="Area2D" parent="Areoj"]
 
@@ -370,7 +758,7 @@ _update_shape_index = 0
 
 editor/display_folded = true
 mode = 0
-tile_set = ExtResource( 5 )
+tile_set = ExtResource( 6 )
 cell/size = Vector2( 64, 64 )
 cell/quadrant_size = 2
 cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
@@ -590,19 +978,19 @@ invert/border = 100.0
 
 editor/display_folded = true
 
-[node name="Ondo" parent="Elementoj" instance=ExtResource( 6 )]
+[node name="Ondo" parent="Elementoj" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 96, 544 )
 
-[node name="Ondo1" parent="Elementoj" instance=ExtResource( 6 )]
+[node name="Ondo1" parent="Elementoj" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 480, 224 )
 
-[node name="Vivo" parent="Elementoj" instance=ExtResource( 7 )]
+[node name="Vivo" parent="Elementoj" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 160, 288 )
 
-[node name="K" parent="." instance=ExtResource( 8 )]
+[node name="K" parent="." instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 349.288, 396.477 )
 transform/scale = Vector2( 1.5, 1.5 )
@@ -612,19 +1000,19 @@ transform/scale = Vector2( 1.5, 1.5 )
 editor/display_folded = true
 sort/enabled = true
 
-[node name="Malamiko" parent="Malamikoj" instance=ExtResource( 9 )]
+[node name="Malamiko" parent="Malamikoj" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 506.355, 188.157 )
 
-[node name="Malamiko1" parent="Malamikoj" instance=ExtResource( 9 )]
+[node name="Malamiko1" parent="Malamikoj" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 155.778, 631.611 )
 
-[node name="Malamiko4" parent="Malamikoj" instance=ExtResource( 9 )]
+[node name="Malamiko4" parent="Malamikoj" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 522.35, 515.649 )
 
-[node name="Malamiko5" parent="Malamikoj" instance=ExtResource( 9 )]
+[node name="Malamiko5" parent="Malamikoj" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 152, 184 )
 
@@ -668,8 +1056,8 @@ __meta__ = {
 transform/pos = Vector2( 134.615, 630.769 )
 transform/rot = 90.0
 transform/scale = Vector2( 0.5, 0.5 )
-normal = ExtResource( 10 )
-pressed = ExtResource( 11 )
+normal = ExtResource( 11 )
+pressed = ExtResource( 12 )
 bitmask = null
 shape = null
 shape_centered = true
@@ -683,8 +1071,8 @@ visibility_mode = 1
 transform/pos = Vector2( 261.538, 693.077 )
 transform/rot = -90.0
 transform/scale = Vector2( 0.5, 0.5 )
-normal = ExtResource( 10 )
-pressed = ExtResource( 11 )
+normal = ExtResource( 11 )
+pressed = ExtResource( 12 )
 bitmask = null
 shape = null
 shape_centered = true
@@ -697,8 +1085,8 @@ visibility_mode = 1
 
 transform/pos = Vector2( 247.615, 594.538 )
 transform/scale = Vector2( 0.5, 0.5 )
-normal = ExtResource( 10 )
-pressed = ExtResource( 11 )
+normal = ExtResource( 11 )
+pressed = ExtResource( 12 )
 bitmask = null
 shape = null
 shape_centered = true
@@ -712,8 +1100,8 @@ visibility_mode = 1
 transform/pos = Vector2( 149.231, 723.077 )
 transform/rot = 180.0
 transform/scale = Vector2( 0.5, 0.5 )
-normal = ExtResource( 10 )
-pressed = ExtResource( 11 )
+normal = ExtResource( 11 )
+pressed = ExtResource( 12 )
 bitmask = null
 shape = null
 shape_centered = true
@@ -727,8 +1115,8 @@ visibility_mode = 1
 transform/pos = Vector2( -4.79622, 792.307 )
 transform/rot = 180.0
 transform/scale = Vector2( 0.5, 0.5 )
-normal = ExtResource( 12 )
-pressed = ExtResource( 13 )
+normal = ExtResource( 13 )
+pressed = ExtResource( 14 )
 bitmask = null
 shape = null
 shape_centered = true
@@ -747,7 +1135,7 @@ margin/left = 16.0
 margin/top = 0.0
 margin/right = 40.0
 margin/bottom = 16.0
-custom_fonts/font = ExtResource( 14 )
+custom_fonts/font = ExtResource( 15 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0.4, 0.6, 1, 1 )
 custom_constants/shadow_offset_x = 2

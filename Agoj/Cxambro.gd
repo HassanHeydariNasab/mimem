@@ -1,7 +1,5 @@
 extends Area2D
 
-onready var Formo = get_node("Formo")
-
 signal eniri
 
 func _ready():
@@ -10,4 +8,4 @@ func _ready():
 func _je_Cxambro_korpo_eniri( korpo ):
 	if not self.is_connected("eniri", T.Radiko, "_je_eniri"):
 		self.connect("eniri", T.Radiko, "_je_eniri")
-	emit_signal("eniri", get_name(), Formo.get_global_pos())
+	emit_signal("eniri", get_name())

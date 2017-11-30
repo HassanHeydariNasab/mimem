@@ -6,9 +6,9 @@ onready var Ondo_Animo = get_node("Ondo/Animo")
 onready var Ondo_Aspekto = get_node("Ondo/Aspekto")
 onready var Ondoj = get_node("/root/Radiko/Kanvaso/Ondoj")
 
-const VIVO = 4.0
-var vivo = 4.0
-var ondoj = 50
+const VIVO = 5.0
+var vivo = 5.0
+var ondoj = 5
 
 func _ready():
 	T.K = self
@@ -88,3 +88,10 @@ func _on_Animo_tween_complete( object, key ):
 	Ondo_Animo.stop_all()
 	Ondo_Animo.seek(0)
 	Ondo_Aspekto.hide()
+
+func _on_Piedo_area_enter( areo ):
+	areo.Fajro.set_emitting(true)
+	T.K.Malsanigxi(1)
+
+func _on_Piedo_area_exit( areo ):
+	areo.Fajro.set_emitting(false)

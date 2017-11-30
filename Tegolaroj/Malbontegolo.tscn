@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://Tegolaroj/Malbontegolo.gd" type="Script" id=1]
+[ext_resource path="res://Malamikoj/partiklo.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[sub_resource type="ColorRamp" id=2]
+
+offsets = FloatArray( 0, 0.473118, 1 )
+colors = ColorArray( 0.78125, 0.662994, 0.308228, 0.778706, 0.992188, 0.380548, 0.217041, 0.629804, 1, 1, 1, 0.812784 )
+
+[node name="Malbontegolo" type="Area2D"]
+
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 32, 32 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 0 )
+gravity = 0.0
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 1.0
+collision/layers = 32
+collision/mask = 32768
+script/script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( 32, 32 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Fajro" type="Particles2D" parent="."]
+
+transform/pos = Vector2( 32, 32 )
+config/amount = 64
+config/lifetime = 0.4
+config/time_scale = 2.0
+config/emit_timeout = 0.5
+config/emitting = false
+config/process_mode = 1
+config/half_extents = Vector2( 32, 32 )
+config/explosiveness = 0.9
+config/texture = ExtResource( 2 )
+params/direction = 180.0
+params/spread = 25.0
+params/linear_velocity = 50.0
+params/spin_velocity = 0.0
+params/orbit_velocity = 0.0
+params/gravity_direction = 0.0
+params/gravity_strength = 0.0
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 0.0
+params/initial_angle = 0.0
+params/initial_size = 0.4
+params/final_size = 0.6
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+color/color_ramp = SubResource( 2 )
+
+

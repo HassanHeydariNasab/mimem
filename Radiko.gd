@@ -13,9 +13,8 @@ func _process(delta):
 func _on_Ondo_body_enter( korpo ):
 	korpo.Morti()
 
-func _je_eniri(s_idx, centro):
+func _je_eniri(s_idx):
 	var idx = int(s_idx.substr(2, 10))
-#	Kamero.set_offset(centro)
 	if has_node("Areoj/"+s_idx+"/Bontegoloj"):
 		var Bontegoloj = get_node("Areoj/"+s_idx+"/Bontegoloj").get_children()
 		var t = 0.1

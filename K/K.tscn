@@ -1,19 +1,19 @@
-[gd_scene load_steps=19 format=1]
+[gd_scene load_steps=20 format=1]
 
 [ext_resource path="res://K/K.gd" type="Script" id=1]
 [ext_resource path="res://K/ombro.png" type="Texture" id=2]
-[ext_resource path="res://K/bildoj/george-14.png" type="Texture" id=3]
-[ext_resource path="res://K/bildoj/george-10.png" type="Texture" id=4]
-[ext_resource path="res://K/bildoj/george-6.png" type="Texture" id=5]
-[ext_resource path="res://K/bildoj/george-15.png" type="Texture" id=6]
-[ext_resource path="res://K/bildoj/george-11.png" type="Texture" id=7]
-[ext_resource path="res://K/bildoj/george-7.png" type="Texture" id=8]
-[ext_resource path="res://K/bildoj/george-13.png" type="Texture" id=9]
-[ext_resource path="res://K/bildoj/george-1.png" type="Texture" id=10]
-[ext_resource path="res://K/bildoj/george-5.png" type="Texture" id=11]
-[ext_resource path="res://K/bildoj/george-12.png" type="Texture" id=12]
-[ext_resource path="res://K/bildoj/george-0.png" type="Texture" id=13]
-[ext_resource path="res://K/bildoj/george-4.png" type="Texture" id=14]
+[ext_resource path="res://K/bildoj/george-12.png" type="Texture" id=3]
+[ext_resource path="res://K/bildoj/george-0.png" type="Texture" id=4]
+[ext_resource path="res://K/bildoj/george-4.png" type="Texture" id=5]
+[ext_resource path="res://K/bildoj/george-13.png" type="Texture" id=6]
+[ext_resource path="res://K/bildoj/george-1.png" type="Texture" id=7]
+[ext_resource path="res://K/bildoj/george-5.png" type="Texture" id=8]
+[ext_resource path="res://K/bildoj/george-15.png" type="Texture" id=9]
+[ext_resource path="res://K/bildoj/george-11.png" type="Texture" id=10]
+[ext_resource path="res://K/bildoj/george-7.png" type="Texture" id=11]
+[ext_resource path="res://K/bildoj/george-14.png" type="Texture" id=12]
+[ext_resource path="res://K/bildoj/george-10.png" type="Texture" id=13]
+[ext_resource path="res://K/bildoj/george-6.png" type="Texture" id=14]
 [ext_resource path="res://K/ondo.png" type="Texture" id=15]
 
 [sub_resource type="CircleShape2D" id=1]
@@ -26,22 +26,22 @@ radius = 17.3192
 animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
-"name": "supre",
+"name": "malsupre",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
 "loop": true,
-"name": "dekstre",
+"name": "maldekstre",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "maldekstre",
+"name": "dekstre",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
 "loop": true,
-"name": "malsupre",
+"name": "supre",
 "speed": 10.0
 } ]
 
@@ -49,6 +49,11 @@ animations = [ {
 
 custom_solver_bias = 0.0
 radius = 100.0
+
+[sub_resource type="CircleShape2D" id=4]
+
+custom_solver_bias = 0.0
+radius = 6.61788
 
 [node name="K" type="KinematicBody2D"]
 
@@ -112,8 +117,33 @@ visibility/visible = false
 transform/scale = Vector2( 0.68, 0.68 )
 texture = ExtResource( 15 )
 
+[node name="Piedo" type="Area2D" parent="."]
+
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 12 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 0 )
+gravity = 0.0
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 2.0
+collision/layers = 32768
+collision/mask = 32
+
+[node name="Piedo_Formo" type="CollisionShape2D" parent="Piedo"]
+
+transform/pos = Vector2( 0, 12 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
 [connection signal="body_enter" from="Ondo" to="." method="_on_Ondo_body_enter"]
 
 [connection signal="tween_complete" from="Ondo/Animo" to="." method="_on_Animo_tween_complete"]
+
+[connection signal="area_enter" from="Piedo" to="." method="_on_Piedo_area_enter"]
+
+[connection signal="area_exit" from="Piedo" to="." method="_on_Piedo_area_exit"]
 
 
